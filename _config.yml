@@ -4,16 +4,16 @@
 
 # Site
 title: Project-Wing
-subtitle: 'Powered by Node.js'
-description: '嗨！欢迎来到workshop Steve的社区！'
+subtitle: '一站式歌手Wiki低代码解决方案'
+description: 'Project-Wing是一个基于Java技术栈的一站式歌手Wiki低代码解决方案，旨在帮助用户轻松创建Wiki网站。无论你是音乐爱好者、歌手粉丝，还是路人，Project-Wing 都能为你提供一个便捷的平台，让你专注于内容策划，而无需担心技术细节。通过 Project-Wing，你可以快速搭建一个功能丰富、界面美观的歌手 Wiki 网站，分享你的音乐热情和知识。如果您熟悉Java互联网技术栈，那么定制本项目将非常容易！'
 keywords:
-author: Steve Workshop
+author: MaterialApps
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://steveworkshop.github.io
+url: https://project-wing.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -29,6 +29,10 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - ./HTML/ **
+  - ./JavaScript/ **
+  - ./CSS/ ** 
+  - ./static/ **
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -60,7 +64,7 @@ prismjs:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: '/articles/'
   per_page: 10
   order_by: -date
 
@@ -92,6 +96,7 @@ pagination_dir: page
 include:
 exclude:
 ignore:
+
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
