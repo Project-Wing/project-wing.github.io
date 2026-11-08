@@ -22,7 +22,7 @@ clone仓库或下载最新版源代码tarball。
 
 将`wing-admin`下的`src\main\resources`中的`application-dev.yaml`复制一份为`application-prod.yaml`
 
-将`application-dev.yaml`里面的内容修改为**最终要部署的目标服务器上的**实际情况，如PosgreSQL的端口号，用户名，密码等。**尤其是`token.secret`，内容可以是任意字符串，但绝对不可以让其他人知道，切记！**
+将`application-prod.yaml`里面的内容修改为**最终要部署的目标服务器上的**实际情况，如PosgreSQL的端口号，用户名，密码等。**尤其是`token.secret`，内容可以是任意字符串，但绝对不可以让其他人知道，切记！**
 
 将`application.yaml`的`wing.profile`调整为合适的路径，例如，如果目标服务器是Windows，可以填写为`C:/Users/Administrator/server/uploadPath`，如果目标服务器是Linux，可以填写为`/home/ubuntu/img`
 
