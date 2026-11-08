@@ -33,16 +33,38 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
-        locales: { root: { translations: {
-          button: { buttonText: '搜索文档', buttonAriaLabel: '搜索文档' },
-          modal: { noResultsText: '没有找到相关内容', resetButtonTitle: '清除搜索', footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' } },
-        } } },
+        locales: {
+          root: {
+            translations: {
+              button: { buttonText: '搜索文档', buttonAriaLabel: '搜索文档' },
+              modal: { noResultsText: '没有找到相关内容', resetButtonTitle: '清除搜索', footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' } },
+            }
+          }
+        },
       },
     },
     sidebar: {
       '/guide/': [
-        { text: '认识 Wing', items: [{ text: '项目概览', link: '/guide/' }, { text: '开始之前', link: '/guide/getting-started' }] },
-        { text: '维护官网', items: [{ text: '文案与截图', link: '/guide/website' }] },
+        {
+          text: '认识 Wing', items: [
+
+            { text: '项目概览', link: '/guide/' },
+            { text: '开始之前', link: '/guide/getting-started' },
+            { text: '环境准备', link: '/guide/prepare' }
+          ]
+        },
+        {
+          text: '安装部署', items: [
+            { text: '编译', link: '/guide/compile' },
+            { text: 'Windows安装', link: '/guide/install-windows' },
+            { text: 'Linux安装', link: '/guide/install-linux' },
+          ]
+        },
+        {
+          text: '维护官网', items: [
+            { text: '文案与截图', link: '/guide/website' }
+          ]
+        },
       ],
     },
     outline: { label: '本页目录', level: [2, 3] },
