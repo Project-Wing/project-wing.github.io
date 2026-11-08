@@ -1,26 +1,22 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "project-wing-website",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "description": "Project Wing 官网与文档",
+  "license": "GPL-3.0-only",
+  "engines": { "node": ">=22.0.0" },
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server"
+    "dev": "vitepress dev docs --host 127.0.0.1",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs --host 127.0.0.1",
+    "typecheck": "vue-tsc --noEmit"
   },
-  "hexo": {
-    "version": "7.0.0"
-  },
-  "dependencies": {
-    "hexo": "^7.0.0",
-    "hexo-generator-archive": "^2.0.0",
-    "hexo-generator-category": "^2.0.0",
-    "hexo-generator-index": "^3.0.0",
-    "hexo-generator-tag": "^2.0.0",
-    "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^6.0.0",
-    "hexo-renderer-stylus": "^3.0.1",
-    "hexo-server": "^3.0.0",
-    "hexo-theme-landscape": "^1.0.0"
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "~5.9.3",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.0",
+    "vue-tsc": "^3.1.0"
   }
 }
